@@ -1,4 +1,6 @@
 import argparse
+import os
+import sys
 
 from file_searcher.search import search_by_extension, search_by_name
 
@@ -13,6 +15,10 @@ def main():
     group.add_argument("-n", "--name", help="Search files by name (e.g., report)")
 
     args = parser.parse_args()
+
+    if not os.path.isdir(args.directory):
+        print(f"\nError: The directory '{args.directory}' does not exist\n")
+        sys.exit(1)
 
     if args.extension:
         results = search_by_extension(args.directory, args.extension)
