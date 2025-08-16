@@ -10,7 +10,7 @@ def main():
     parser.add_argument("directory", help="Directory to search in ")
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument(
-        "-e", "--extension", help="Search files by extension (e.g., .txt)"
+        "-e", "--extension", nargs="+", help="Search files by extension(s) (e.g., .txt)"
     )
     group.add_argument("-n", "--name", help="Search files by name (e.g., report)")
 
