@@ -63,7 +63,7 @@ python -m unittest discover -s tests
 
 ```
 
-## 📁 Project Structurej
+## 📁 Project Structure
 
 ```
 file_searcher_project/
